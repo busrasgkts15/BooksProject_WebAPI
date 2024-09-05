@@ -139,3 +139,6 @@ C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Microsof
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\obj\Debug\net8.0\WebApı.sourcelink.json
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Entities.dll
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Entities.pdb

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApı.Models;
+using Entities.Models;
 using WebApı.Repositories.Config;
 
 namespace WebApı.Repositories

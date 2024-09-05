@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using WebApı.Models;
+using Entities.Models;
 
 namespace WebApı.Repositories.Config
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using WebApı.Models;
+using Entities.Models;
 using WebApı.Repositories;
 
 namespace WebApı.Controllers

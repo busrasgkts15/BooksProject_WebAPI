@@ -142,3 +142,5 @@ C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Newtonso
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\obj\Debug\net8.0\WebApı.sourcelink.json
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Entities.dll
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Entities.pdb
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Repositories.dll
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Repositories.pdb

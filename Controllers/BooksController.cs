@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Entities.Models;
 using Repositories.EFCore;
+using Repositories.Contracts;
 
 namespace WebApı.Controllers
 {
@@ -11,11 +12,11 @@ namespace WebApı.Controllers
     public class BooksController : ControllerBase
     {
 
-        private readonly RepositoryContext _context;
+        private readonly IRepositoryManager _manager;
 
-        public BooksController(RepositoryContext context)
+        public BooksController(IRepositoryManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
         [HttpGet]
@@ -23,7 +24,7 @@ namespace WebApı.Controllers
         {
             try
             {
-                var books = _context.Books.ToList();
+                var books = _manager.Book.GetAllBooks(false);
                 return Ok(books);
             }
             catch (Exception ex)
@@ -39,7 +40,7 @@ namespace WebApı.Controllers
 
             try
             {
-                var book = _context.Books.Where(b => b.Id.Equals(id)).SingleOrDefault();
+                var book = _manager.Book.GetOneBookById(id, false);
 
                 if (book is null)
                 {
@@ -65,8 +66,9 @@ namespace WebApı.Controllers
 
                 }
 
-                _context.Books.Add(book);
-                _context.SaveChanges();
+                _manager.Book.CreateOneBook(book);
+                _manager.Save();
+
                 return StatusCode(201, book);
             }
 
@@ -83,8 +85,8 @@ namespace WebApı.Controllers
             try
             {
                 // check book ?
-                var entity = _context.Books.Where(
-                    b => b.Id.Equals(id)).SingleOrDefault();
+                var entity = _manager.Book.GetOneBookById(
+                    id, true);
 
                 if (entity is null)
                 {
@@ -100,7 +102,7 @@ namespace WebApı.Controllers
 
                 entity.Title = book.Title;
                 entity.Price = book.Price;
-                _context.SaveChanges();
+                _manager.Save();
                 return Ok(book);
 
             }
@@ -118,23 +120,22 @@ namespace WebApı.Controllers
         {
             try
             {
-                var removebook = _context.Books.Where(
-                    b => b.Id.Equals(id)).SingleOrDefault();
+                var removebook = _manager.Book.GetOneBookById(id, false);
 
                 if (removebook is null)
                 {
                     return NotFound();
                 }
 
-                _context.Books.Remove(removebook);
-                _context.SaveChanges();
+                _manager.Book.DeleteOneBook(removebook);
+                _manager.Save();
                 return Ok(removebook);
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            
+
         }
 
 
@@ -142,20 +143,28 @@ namespace WebApı.Controllers
         public IActionResult PartiallyUpdateOneBook([FromRoute(Name = "id")] int id, [FromBody] JsonPatchDocument<Book> bookPatch)
         {
 
-            var entity = _context.Books.Where(
-                b => b.Id.Equals(id)).SingleOrDefault();
-
-            if (entity is null)
+            try
             {
-                return NotFound();
-            }
+                var entity = _manager.Book.GetOneBookById(id, true);
 
-            bookPatch.ApplyTo(entity);
-            _context.SaveChanges();
-            return NoContent();
+                if (entity is null)
+                {
+                    return NotFound();
+                }
+
+                bookPatch.ApplyTo(entity);
+                _manager.Book.Update(entity);
+                
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
 
 
         }
 
     }
+
 }

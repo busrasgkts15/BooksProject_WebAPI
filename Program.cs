@@ -13,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureSqlContext(builder.Configuration);
 
+builder.Services.ConfigureRepositoryManager();
+
 
 var app = builder.Build();
 

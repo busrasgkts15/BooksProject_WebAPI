@@ -144,3 +144,5 @@ C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Entities
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Entities.pdb
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Repositories.dll
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Repositories.pdb
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Services.dll
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Services.pdb

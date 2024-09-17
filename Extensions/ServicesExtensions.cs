@@ -2,6 +2,9 @@
 using Microsoft.Identity.Client;
 using Repositories.Contracts;
 using Repositories.EFCore;
+using Services;
+using Services.Contracts;
+using System.Runtime.CompilerServices;
 
 namespace WebApı.Extensions
 {
@@ -17,5 +20,13 @@ namespace WebApı.Extensions
 
         public static void ConfigureRepositoryManager(this IServiceCollection services) =>
             services.AddScoped<IRepositoryManager, RepositoryManager>();
+
+        public static void ConfigureServiceManager(this IServiceCollection services) =>
+
+            services.AddScoped<IServicesManager, ServicesManager>();
+
     }
+
+
+
 }

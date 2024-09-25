@@ -148,3 +148,6 @@ C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Services
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Services.pdb
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Presentation.dll
 C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\Presentation.pdb
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\nlog.config
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\NLog.dll
+C:\Users\User\Desktop\webapi\api_ui\bsStoreApp\WebApı\bin\Debug\net8.0\NLog.Extensions.Logging.dll

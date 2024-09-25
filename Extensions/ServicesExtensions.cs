@@ -25,8 +25,12 @@ namespace WebApı.Extensions
 
             services.AddScoped<IServicesManager, ServicesManager>();
 
-    }
 
 
+
+        public static void ConfigureLoggerService(this IServiceCollection services) =>
+            services.AddSingleton<ILoggerService, LoggerManager>();
+
+            }
 
 }
